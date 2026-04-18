@@ -49,12 +49,7 @@ loom {
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.layered {
-        officialMojangMappings()
-        if (project.hasProperty('parchment_version') && project.parchment_version) {
-            parchment "org.parchmentmc.data:parchment-${minecraft_version}:${project.parchment_version}@zip"
-        }
-    }
+
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")))
